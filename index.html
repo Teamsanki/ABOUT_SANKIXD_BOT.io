@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loading - SANKI XD Music Bot</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #6a11cb, #2575fc);
+            font-family: Arial, sans-serif;
+            color: white;
+            overflow: hidden;
+        }
+        .loading-container {
+            text-align: center;
+        }
+        .logo {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .spinner {
+            width: 80px;
+            height: 80px;
+            border: 10px solid rgba(255, 255, 255, 0.3);
+            border-top: 10px solid white;
+            border-radius: 50%;
+            animation: spin 1.5s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        .message {
+            margin-top: 20px;
+            font-size: 1.2rem;
+        }
+    </style>
+    <script>
+        setTimeout(() => {
+            window.location.href = "nextpage.html"; // Replace with your next page URL
+        }, 10000); // Redirect after 10 seconds
+    </script>
+</head>
+<body>
+    <div class="loading-container">
+        <div class="logo">🎵 SANKI XD Music Bot</div>
+        <div class="spinner"></div>
+        <div class="message">Bringing the beats to your Telegram... Please wait!</div>
+    </div>
+</body>
+</html>
