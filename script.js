@@ -8,5 +8,5 @@ document.addEventListener("DOMContentLoaded", () => {
     // Redirect after 10 seconds
     setTimeout(() => {
         window.location.href = "https://your-next-page-url.com"; // Replace with your destination URL
-    }, 10000);
+    }, 15000);
 });
