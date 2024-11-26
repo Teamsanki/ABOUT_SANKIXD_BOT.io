@@ -79,11 +79,40 @@ body {
     border: 3px solid white;
 }
 
-/* Countdown Timer */
-.countdown {
-    font-size: 1.5rem;
+/* Bot Title */
+.logo {
+    font-size: 1.8rem;
     font-weight: bold;
-    margin: 20px 0;
+    margin-bottom: 20px;
+}
+
+/* Progress Bar Container */
+.progress-bar-container {
+    width: 80%;
+    max-width: 400px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+
+.progress-bar {
+    width: 0%;
+    height: 100%;
+    background: white;
+    animation: progress-animation 10s linear forwards;
+    border-radius: 5px;
+}
+
+/* Keyframe for Progress Bar Animation */
+@keyframes progress-animation {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
 }
 
 /* Typing Message */
