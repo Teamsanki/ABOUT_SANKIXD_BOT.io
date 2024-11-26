@@ -2,35 +2,75 @@
 body {
     margin: 0;
     padding: 0;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
     font-family: Arial, sans-serif;
     color: white;
     overflow: hidden;
-    animation: bg-animation 10s infinite alternate;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
 }
 
-/* Animated Gradient Background */
-@keyframes bg-animation {
+/* Waves Container */
+.wave-container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    bottom: 0;
+    left: 0;
+}
+
+/* Individual Wave Styles */
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    opacity: 0.6;
+    top: 0;
+    animation: wave-animation 10s infinite linear;
+}
+
+/* First Wave */
+.wave1 {
+    z-index: 1;
+    animation-delay: 0s;
+}
+
+/* Second Wave */
+.wave2 {
+    z-index: 2;
+    animation-delay: 2s;
+    opacity: 0.4;
+}
+
+/* Third Wave */
+.wave3 {
+    z-index: 3;
+    animation-delay: 4s;
+    opacity: 0.2;
+}
+
+/* Wave Animation */
+@keyframes wave-animation {
     0% {
-        background: linear-gradient(135deg, #6a11cb, #2575fc);
-    }
-    50% {
-        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+        transform: translateX(0) translateY(0);
     }
     100% {
-        background: linear-gradient(135deg, #00c6ff, #0072ff);
+        transform: translateX(-50%) translateY(0);
     }
 }
 
 /* Loading Screen Container */
 .loading-container {
+    position: relative;
     text-align: center;
+    z-index: 10;
 }
 
-/* Image Styling */
+/* Logo Image */
 .logo-img {
     width: 120px;
     height: auto;
@@ -39,7 +79,7 @@ body {
     border: 3px solid white;
 }
 
-/* Logo Text Styling */
+/* Bot Name */
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
@@ -55,7 +95,6 @@ body {
     border-radius: 5px;
     overflow: hidden;
     margin: 20px auto;
-    position: relative;
 }
 
 /* Progress Bar Animation */
@@ -79,7 +118,7 @@ body {
     font-size: 1.2rem;
 }
 
-/* Company Name Styling */
+/* Company Name */
 .company-name {
     display: inline-block;
     margin-top: 20px;
