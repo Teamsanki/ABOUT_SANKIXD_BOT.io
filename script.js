@@ -17,6 +17,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Redirect after the progress bar animation completes (10 seconds)
     setTimeout(() => {
-        window.location.href = "https://your-next-page-url.com"; // Replace with your destination URL
+        window.location.href = "https://teamsanki.github.io/SANKIXD_ABOUT.io/"; // Replace with your destination URL
     }, 10000); // Match this duration to the CSS animation
 });
