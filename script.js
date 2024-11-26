@@ -3,7 +3,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const progressBar = document.querySelector(".progress-bar");
 
     // Start the progress bar animation
-    progressBar.style.animation = "progress-animation 10s linear forwards";
+    progressBar.style.animation = "progress-animation 15s linear forwards";
 
     // Redirect after 10 seconds
     setTimeout(() => {
