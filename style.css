@@ -1,0 +1,47 @@
+/* General Body Styling */
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #6a11cb, #2575fc);
+    font-family: Arial, sans-serif;
+    color: white;
+    overflow: hidden;
+}
+
+/* Loading Screen Container */
+.loading-container {
+    text-align: center;
+}
+
+/* Logo Style */
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Spinner Animation */
+.spinner {
+    width: 80px;
+    height: 80px;
+    border: 10px solid rgba(255, 255, 255, 0.3);
+    border-top: 10px solid white;
+    border-radius: 50%;
+    animation: spin 1.5s linear infinite;
+}
+
+/* Keyframe for Spinner */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Loading Message */
+.message {
+    margin-top: 20px;
+    font-size: 1.2rem;
+}
