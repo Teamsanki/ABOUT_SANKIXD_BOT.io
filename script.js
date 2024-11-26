@@ -1,34 +1,22 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const timerElement = document.getElementById("timer");
     const messageElement = document.getElementById("message");
 
-    let countdown = 0; // Start countdown from 0
-    let messageIndex = 0; // Track current character in message
+    // Typing message
+    const message = "Welcome to Sᴀɴᴋɪ Xᴅ Mᴜsɪᴄ Bᴏᴛ! Redirecting you now...";
+    let messageIndex = 0;
 
-    const message = "Welcome to SANKI XD Music Bot! Redirecting you now..."; // Typing message
-
-    // Start the countdown
-    const countdownInterval = setInterval(() => {
-        timerElement.textContent = countdown;
-        countdown++;
-
-        if (countdown > 10) {
-            clearInterval(countdownInterval); // Stop countdown after 10
-        }
-    }, 1000); // Update every second
-
-    // Typing effect
+    // Typing effect logic
     const typingInterval = setInterval(() => {
         if (messageIndex < message.length) {
             messageElement.textContent += message[messageIndex];
             messageIndex++;
         } else {
             clearInterval(typingInterval); // Stop typing when message is complete
-
-            // Redirect after the message finishes typing
-            setTimeout(() => {
-                window.location.href = "https://your-next-page-url.com"; // Replace with your destination URL
-            }, 1000); // Small delay before redirect
         }
-    }, 100); // Typing speed (adjust as needed)
+    }, 100); // Adjust typing speed here
+
+    // Redirect after the progress bar animation completes (10 seconds)
+    setTimeout(() => {
+        window.location.href = "https://your-next-page-url.com"; // Replace with your destination URL
+    }, 10000); // Match this duration to the CSS animation
 });
