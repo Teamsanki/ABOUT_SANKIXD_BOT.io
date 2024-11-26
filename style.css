@@ -6,10 +6,23 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background: linear-gradient(135deg, #6a11cb, #2575fc);
     font-family: Arial, sans-serif;
     color: white;
     overflow: hidden;
+    animation: bg-animation 10s infinite alternate;
+}
+
+/* Animated Gradient Background */
+@keyframes bg-animation {
+    0% {
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+    }
+    50% {
+        background: linear-gradient(135deg, #ff7e5f, #feb47b);
+    }
+    100% {
+        background: linear-gradient(135deg, #00c6ff, #0072ff);
+    }
 }
 
 /* Loading Screen Container */
@@ -17,7 +30,16 @@ body {
     text-align: center;
 }
 
-/* Logo Style */
+/* Image Styling */
+.logo-img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+    border-radius: 50%; /* Makes the image circular */
+    border: 3px solid white;
+}
+
+/* Logo Text Styling */
 .logo {
     font-size: 2rem;
     font-weight: bold;
